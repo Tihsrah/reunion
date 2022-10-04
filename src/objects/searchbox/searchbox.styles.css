@@ -1,0 +1,12 @@
+.input-box{
+    border-color: rgb(240, 232, 232);
+    padding: 6px 1rem 6px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    margin-right: 2px;
+    border-radius: 8px;
+}

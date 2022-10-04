@@ -1,0 +1,31 @@
+
+.logo-block {
+    display: inline-block;
+    padding-right: 0px;
+}
+
+.navlink-block{
+    display: inline-block;
+    margin-left: 2px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.navlink{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+}
+.button-block{
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-bar{
+    background-color: aliceblue;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
