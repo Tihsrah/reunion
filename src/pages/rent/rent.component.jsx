@@ -4,6 +4,7 @@ import './rent.styles.css'
 import data from '../../data/data'
 import Card from "../../component/card/card.component";
 import SearchBox from "../../objects/searchbox/searchbox.components";
+import House from "../../component/house/house.component";
 function Rent(){
 
     // const [searchField, setSearchField] = useState('');
@@ -19,19 +20,21 @@ function Rent(){
     //     return property.name.toLowerCase().includes(searchField);
     //   });
 
-    function noteComponent(components) {
-        return (
-            <Card
-            id={components.id}
-            image={components.image}
-            title={components.title}
-            location={components.location}
-            beds={components.beds}
-            bathrooms={components.bathrooms}
-            dimension={components.dimension}
-            />
-        )
-    }
+
+    //workable but not used now
+    // function noteComponent(components) {
+    //     return (
+    //         <Card
+    //         id={components.id}
+    //         image={components.image}
+    //         title={components.title}
+    //         location={components.location}
+    //         beds={components.beds}
+    //         bathrooms={components.bathrooms}
+    //         dimension={components.dimension}
+    //         />
+    //     )
+    // }
     return(
         <div className="rent-body">
 
@@ -57,7 +60,7 @@ function Rent(){
         
         
         <div className="property-cards">
-        {data.map(noteComponent)}
+        <House />
         </div>
 
         </div>

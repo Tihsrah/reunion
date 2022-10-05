@@ -57,6 +57,16 @@ const data = [
         bathrooms:"2",
         dimension:"5x7 m2"
         
+    },
+    {
+        key: "7",
+        image:"https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041_960_720.jpg",
+        title: "Delegation",
+        location:"2699 Green Valley, Highland Lake, FL",
+        beds:"3",
+        bathrooms:"2",
+        dimension:"5x7 m2"
+        
     }
     
     
