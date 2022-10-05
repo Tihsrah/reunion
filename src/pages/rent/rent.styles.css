@@ -41,6 +41,9 @@ background-color: aliceblue;
     margin: 2rem;
 
 }
+.filter-title{
+    padding-bottom: 0px;
+}
 .btn-filter-div{
     background-color: white;
     display: inline-block;

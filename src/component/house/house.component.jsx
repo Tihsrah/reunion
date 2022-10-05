@@ -1,13 +1,28 @@
 import { Grid } from '@mui/material';
+import { useState } from 'react';
 import data from '../../data/data'
 import './house.style.css'
 
 function House(props){
-    const { id,image,title,location,beds,bathrooms,dimension} = props;
+    const { id,image,title,location,beds,bathrooms,dimension,searchField} = props;
+    const [properties, setProperties] = useState([]);
+    const filteredProduct = properties.filter((property) => {
+        return property.name.toLowerCase().includes(searchField);
+      });
     return (
         <Grid item xs={12} container spacing={2}>
             {
-            data.map(dat =>{
+            data.filter((val)=>{
+                if(searchField==""){
+                    return val;
+                }else if(val.title.toLowerCase().includes(searchField.toLowerCase())){
+                    return val;
+                }
+            }).filter((val)=>{
+                if(val.beds>1){  //yahan replace karna hai.
+                    return val;
+                }
+            }).map(dat =>{
                 return(
                     <Grid item lg={4}>
                     <div className='content'>

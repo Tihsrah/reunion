@@ -5,7 +5,7 @@ function SearchBox(props){
         <input
             placeholder={props.placeholder}
             className="input-box"
-            // onChange={props.onChange}
+            onChange={props.onChange}
         />
     )
 }
