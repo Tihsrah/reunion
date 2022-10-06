@@ -5,13 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { UserProvider } from './context/filterContext.component';
+import { ArivalProvider } from './context/arivalFilter.component';
+import { PriceProvider } from './context/priceContext.component';
+import { PropertyProvider } from './context/propertyFilter.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   <BrowserRouter>
     <UserProvider>
+    <ArivalProvider>
+    <PriceProvider>
+    <PropertyProvider>
     <App />
+    </PropertyProvider>
+    </PriceProvider>
+    </ArivalProvider>
     </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

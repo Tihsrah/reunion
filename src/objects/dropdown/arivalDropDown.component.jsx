@@ -1,14 +1,15 @@
 import  React from 'react';
-import { filterContext } from '../../context/filterContext.component';
+import { arivalContext } from '../../context/arivalFilter.component';
 
-import './dropdown.styles.scss'
 
-function Dropdown({data,name}){
+// import './dropdown.styles.css'
+
+function ArivalDropDown({data,name}){
     const [value,setValue]=React.useState("");
-    const {setLocationFilter}=React.useContext(filterContext)
+    const {setArivalFilter}=React.useContext(arivalContext)
   
     const handleChange = (e) => {
-        setLocationFilter(value);
+        setArivalFilter(value);
         setValue(e.target.value);
         
       };
@@ -32,4 +33,4 @@ function Dropdown({data,name}){
 
 }
 
-export default Dropdown;
+export default ArivalDropDown;

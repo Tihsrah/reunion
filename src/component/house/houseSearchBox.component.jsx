@@ -1,9 +1,10 @@
 import { Grid } from '@mui/material';
 import { useState } from 'react';
+import data from '../../data/data';
 
 import './house.style.css'
 
-function House(props){
+function HouseSearchBox(props){
     const {searchField} = props;
 
     
@@ -12,7 +13,13 @@ function House(props){
     return (
         <Grid item xs={12} container spacing={2}>
             {
-            searchField.map(val =>{
+            data.filter(val =>{
+                if(searchField.title===""){
+                    return val;
+                }else if(val.title.toLowerCase().includes(searchField.toLowerCase())){
+                    return val;
+                }
+            }).map(val =>{
                 return(
                     <Grid key={val.key} item lg={4}>
                     <div className='content'>
@@ -44,7 +51,7 @@ function House(props){
     )
 }
 
-export default House;
+export default HouseSearchBox;
 
 
 // <div className="card-container block" key={id}>

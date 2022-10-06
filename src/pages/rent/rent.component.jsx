@@ -6,19 +6,24 @@ import House from "../../component/house/house.component";
 import { useState } from "react";
 import Dropdown from "../../objects/dropdown/dropdown.components";
 import Filter from "../../component/filter/filter.component";
+import ArivalDropDown from "../../objects/dropdown/arivalDropDown.component";
+import PriceDropDown from "../../objects/dropdown/pricedropdown.component";
+import PropertyDropdown from "../../objects/dropdown/propertyDropDown.component";
+import HouseSearchBox from "../../component/house/houseSearchBox.component";
 function Rent(){
 
-    const [searchField, setSearchField] = useState('');
-    // const [properties, setProperties] = useState([]);
+    // const [searchField, setSearchField] = useState('');
+    const [properties, setProperties] = useState([]);
+    const [searchText,setSearchText]=useState("");
 
     const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLowerCase();
-    setSearchField(searchFieldString)
+    setSearchText(searchFieldString)
     }
-
-    // const filteredProduct = properties.filter((property) => {
-    //     return property.name.toLowerCase().includes(searchField);
-    //   });
+    
+    const filteredProduct = properties.filter((property) => {
+        return property.name.toLowerCase().includes(searchText);
+      });
 
 
     //workable but not used now
@@ -45,39 +50,41 @@ function Rent(){
             id:2,
             text:"tt"
         },
-        {
-            id:3,
-            text:"thirty"
-        }
     ]
 
     const when=[
         {
             id:1,
-            text:"Green Valley"
+            text:"12 Apr - 14 Mar"
         },
         {
             id:2,
-            text:"tt"
+            text:"12 Jun - 14 Jul"
         },
         {
             id:3,
-            text:"thirty"
+            text:"12 Nov - 14 Dec"
         }
     ]
 
     const price=[
         {
             id:1,
-            text:"50-100"
+            text:"1500-2500",
+            min:1500,
+            max:2500
         },
         {
             id:2,
-            text:"100-150"
+            text:"2500-3500",
+            min:2500,
+            max:3500
         },
         {
             id:3,
-            text:"150-200"
+            text:"3500-5500",
+            min:3500,
+            max:5500
         }
     ]
     const property=[
@@ -91,7 +98,7 @@ function Rent(){
         },
         {
             id:3,
-            text:"Big"
+            text:"Big House"
         }
     ]
     
@@ -106,7 +113,7 @@ function Rent(){
         onChange={onSearchChange}
 
         />
-    </div>
+        </div>
 
         <div className="all-filters">
             <div className="filter">
@@ -119,7 +126,7 @@ function Rent(){
 
             <div className="filter">
             <h3 >When</h3>
-            <Dropdown 
+            <ArivalDropDown 
             data={when}
             name="when"
             />
@@ -127,7 +134,7 @@ function Rent(){
 
             <div className="filter">
             <h3 className="filter-title">Price</h3>
-            <Dropdown 
+            <PriceDropDown
             data={price}
             name="price"
             />
@@ -135,7 +142,7 @@ function Rent(){
 
             <div className="filter">
             <h3 >Property type</h3>
-            <Dropdown 
+            <PropertyDropdown 
             data={property}
             name="property"
             />

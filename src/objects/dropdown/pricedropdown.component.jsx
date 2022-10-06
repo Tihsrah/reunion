@@ -1,14 +1,14 @@
 import  React from 'react';
-import { filterContext } from '../../context/filterContext.component';
+import { priceContext } from '../../context/priceContext.component';
 
-import './dropdown.styles.scss'
+// import './dropdown.styles.css'
 
-function Dropdown({data,name}){
+function PriceDropDown({data,name}){
     const [value,setValue]=React.useState("");
-    const {setLocationFilter}=React.useContext(filterContext)
+    const {setPriceFilter}=React.useContext(priceContext)
   
     const handleChange = (e) => {
-        setLocationFilter(value);
+        setPriceFilter(value);
         setValue(e.target.value);
         
       };
@@ -32,4 +32,4 @@ function Dropdown({data,name}){
 
 }
 
-export default Dropdown;
+export default PriceDropDown;

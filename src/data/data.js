@@ -8,7 +8,11 @@ const data = [
         bathrooms:"2",
         dimension:"5x7 ",
         price:"$2,095",
-        property:"Houses"
+        property:"Houses",
+        arival:"12 Apr - 14 Mar",
+        min:1000,
+        max:3000,
+        priceRange:"1500-2500"
     },
     {
         key: "2",
@@ -19,7 +23,12 @@ const data = [
         bathrooms:"2",
         dimension:"5x7 ",
         price:"$2,700",
-        property:"Mansion"
+        property:"Mansion",
+        arival:"12 Apr - 14 Mar",
+        min:1000,
+        max:3000,
+        priceRange:"2500-3500"
+        
         
     },
     {
@@ -31,19 +40,28 @@ const data = [
         bathrooms:"2",
         dimension:"5x7 ",
         price:"$4,550",
-        property:"Big"
+        property:"Big House",
+        arival:"12 Jun - 14 Jul",
+        min:3000,
+        max:3500,
+        priceRange:"3500-5500"
         
     },
     {
         key: "4",
         image:"https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         title: "Tokyo town",
-        location:"2699 tt, Highland Lake, FL",
+        location:"Green Valley",
         beds:"3",
         bathrooms:"2",
         dimension:"5x7 ",
         price:"$4,550",
-        property:"Houses"
+        property:"Houses",
+        arival:"12 Jun - 14 Jul",
+        min:3000,
+        max:3500,
+        priceRange:"3500-5500"
+        
     },
     {
         key: "5",
@@ -54,7 +72,12 @@ const data = [
         bathrooms:"2",
         dimension:"5x7 ",
         price:"$4,550",
-        property:"Houses"
+        property:"Houses",
+        arival:"12 Nov - 14 Dec",
+        min:1500,
+        max:4000,
+        priceRange:"3500-5500"
+        
         
     },
     {
@@ -66,7 +89,11 @@ const data = [
         bathrooms:"2",
         dimension:"5x7 ",
         price:"$4,550",
-        property:"Houses"
+        property:"Houses",
+        arival:"12 Nov - 14 Dec",
+        min:1500,
+        max:4000,
+        priceRange:"3500-5500"
         
     },
     {
@@ -78,7 +105,11 @@ const data = [
         bathrooms:"2",
         dimension:"5x7 ",
         price:"$4,550",
-        property:"Houses"
+        property:"Houses",
+        arival:"12 Apr - 14 Mar",
+        min:1500,
+        max:4000,
+        priceRange:"3500-5500"
         
     }
     
