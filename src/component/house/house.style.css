@@ -17,21 +17,62 @@
 /* .card-container{
     width: 20rem;
     
-}
+}*/
 .content{
-    display: inline-block;
-} */
+    /* display: inline-block;
+     */
+     padding: 1rem;
+} 
 
 .image img{
     display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 8px 8px 0px 0px;
 }
 .card-details{
     padding: 5px 3rem 5px 3rem;
     background-color: white;
+    border-radius: 8px;
+
+
 }
 
 .card-inner-details{
     background-color: white;
+}
+
+.price-text{
+    display: inline-block;
+    color: blueviolet;
+    background-color: white;
+    margin-top: 2rem;
+    margin-bottom: 0%;
+}
+
+.price-month-text{
+    margin-top: 1.5%;
+    margin-bottom: 0%;
+    background-color: white;
+    display: inline-block;
+    color: gray;
+}
+
+.title-text{
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.location-text{
+    display: block;
+    color: grey;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+.bed-bath-dim{
+    display: inline-block;
+    margin-top: 1rem;
+    padding-left: 0rem;
+    padding-right: 0.5rem;
+    color: grey;
 }
