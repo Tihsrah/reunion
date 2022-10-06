@@ -1,6 +1,6 @@
 .btn-white{
     background-color: aliceblue;
-    color: blueviolet;
+    color: rgb(104, 43, 226);
     /* border: none; */
     border-color: rgb(240, 232, 232);
     padding: 8px 20px 8px 20px;
@@ -14,7 +14,7 @@
     border-radius: 8px;
 }
 .btn-blue{
-    background-color: blueviolet;
+    background-color: rgb(104, 43, 226);
     color: aliceblue;
     /* border: none; */
     border-color: white;

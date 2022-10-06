@@ -1,5 +1,4 @@
 import { Grid } from '@mui/material';
-import { useState } from 'react';
 
 import './house.style.css'
 

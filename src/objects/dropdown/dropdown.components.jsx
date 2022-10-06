@@ -11,6 +11,7 @@ function Dropdown({data,name}){
         setLocationFilter(value);
         setValue(e.target.value);
         
+        
       };
       
     return (

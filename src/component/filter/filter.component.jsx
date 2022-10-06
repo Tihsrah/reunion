@@ -7,23 +7,23 @@ import { priceContext } from '../../context/priceContext.component';
 import { propertyContext } from '../../context/propertyFilter.component';
 function Filter(){
 
-    const {locationFilter,setLocationFilter}=useContext(filterContext);
-    const [properties, setProperties] = useState(data);
+    const {locationFilter}=useContext(filterContext);
+    const [properties] = useState(data);
     const filteredProduct = properties.filter(property => property.location.includes(locationFilter));
     
-    const {arivalFilter,setArivalFilter}=useContext(arivalContext);
-    const [arivalProperties, setArivalProperties] = useState(data);
+    const {arivalFilter}=useContext(arivalContext);
+    const [arivalProperties] = useState(data);
     const arivalFilteredProduct = arivalProperties.filter(arivalProperty => arivalProperty.arival.includes(arivalFilter));
     const nested =filteredProduct.filter((arival)=>arivalFilteredProduct.includes(arival))
 
-    const {priceFilter,setPriceFilter}=useContext(priceContext);
-    const [priceProperties, setPriceProperties] = useState(data);
+    const {priceFilter}=useContext(priceContext);
+    const [priceProperties] = useState(data);
     const priceFilteredProduct = priceProperties.filter(priceProperty => priceProperty.priceRange.includes(priceFilter));
     
     const nested2=arivalFilteredProduct.filter((price)=>priceFilteredProduct.includes(price))
 
-    const {propertyFilter,setPropertyFilter}=useContext(propertyContext);
-    const [propertyProperties, setPropertyProperties] = useState(data);
+    const {propertyFilter}=useContext(propertyContext);
+    const [propertyProperties] = useState(data);
     const propertyFilteredProduct = propertyProperties.filter(propertyProperty => propertyProperty.property.includes(propertyFilter));
     
     const nested3=arivalFilteredProduct.filter((property)=>propertyFilteredProduct.includes(property))

@@ -2,7 +2,6 @@
 import Button from "../../objects/button/button.component";
 import './rent.styles.css'
 import SearchBox from "../../objects/searchbox/searchbox.components";
-import House from "../../component/house/house.component";
 import { useState } from "react";
 import Dropdown from "../../objects/dropdown/dropdown.components";
 import Filter from "../../component/filter/filter.component";
@@ -13,7 +12,7 @@ import HouseSearchBox from "../../component/house/houseSearchBox.component";
 function Rent(){
 
     // const [searchField, setSearchField] = useState('');
-    const [properties, setProperties] = useState([]);
+    const [properties] = useState([]);
     const [searchText,setSearchText]=useState("");
 
     const onSearchChange = (event) => {
@@ -159,8 +158,8 @@ function Rent(){
         
         <div className="property-cards">
         
-
-        <Filter />
+        {/*we can use <HouseSearchBox /> here to use search input box for filtering with input. */}
+        <Filter /> 
         </div>
 
         </div>

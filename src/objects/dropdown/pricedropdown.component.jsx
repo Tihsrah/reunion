@@ -11,6 +11,7 @@ function PriceDropDown({data,name}){
         setPriceFilter(value);
         setValue(e.target.value);
         
+        
       };
       
     return (

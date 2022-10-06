@@ -11,6 +11,7 @@ function PropertyDropdown({data,name}){
         setPropertyFilter(value);
         setValue(e.target.value);
         
+        
       };
       
     return (

@@ -1,6 +1,6 @@
-import { Component } from "react";
+
 import './navbar.styles.css';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Button from "../../objects/button/button.component";
 
 function Navbar(){
@@ -8,14 +8,14 @@ function Navbar(){
         <nav className="nav-bar">
         
             <div className="logo-block">
-                <h5>Estatery</h5>
+                <a href="/">🏠 Estatery</a>
             </div>
             <div className="navlink-block">
-                <Link className="navlink" to='/' >Rent</Link>   
-                <Link className="navlink" to='/buy' >Buy</Link>
-                <Link className="navlink" to='/sell' >Sell</Link>
-                <Link className="navlink" to='/manage' >Manage Property</Link>
-                <Link className="navlink" to='/resources' >Resources</Link>
+                <NavLink className="navlink" to='/' >Rent</NavLink>   
+                <NavLink className="navlink" to='/buy' >Buy</NavLink>
+                <NavLink className="navlink" to='/sell' >Sell</NavLink>
+                <NavLink className="navlink" to='/resources' >Resources</NavLink>
+                <NavLink className="navlink" to='/manage' >Manage Property</NavLink>
             </div>
             <div className="button-block">
                 <Button

@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import { useState } from 'react';
+
 import data from '../../data/data';
 
 import './house.style.css'

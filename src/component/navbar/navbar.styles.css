@@ -1,9 +1,24 @@
-
+nav a.active{
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(211, 194, 252);
+    color: rgb(104, 43, 226);
+}
+nav a{
+    padding: 0.5rem;
+}
 .logo-block {
     display: inline-block;
     padding-right: 0px;
+    padding-top: 1.2rem;
 }
-
+.logo-block a{
+    text-decoration: none;
+    height: 1rem;
+    font-size: 20px;
+    
+    
+}
 .navlink-block{
     display: inline-block;
     margin-left: 2px;
@@ -15,12 +30,11 @@
     padding-right: 20px;
     text-decoration: none;
 }
+
 .button-block{
     display: inline-block;
-    position: absolute;
-    top: 18px;
-    right: 30px;
-    padding-left: 10px;
+    margin-top: -15px;
+    padding-left: 35rem;
     padding-right: 10px;
 }
 
