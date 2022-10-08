@@ -11,6 +11,9 @@ function Filter(){
     const [properties] = useState(data);
     const filteredProduct = properties.filter(property => property.location.includes(locationFilter));
     
+    console.log(locationFilter);
+    
+
     const {arivalFilter}=useContext(arivalContext);
     const [arivalProperties] = useState(data);
     const arivalFilteredProduct = arivalProperties.filter(arivalProperty => arivalProperty.arival.includes(arivalFilter));
@@ -27,24 +30,43 @@ function Filter(){
     const propertyFilteredProduct = propertyProperties.filter(propertyProperty => propertyProperty.property.includes(propertyFilter));
     
     const nested3=arivalFilteredProduct.filter((property)=>propertyFilteredProduct.includes(property))
-
+    const obj={}
+    if(locationFilter !==null && locationFilter !=0){
+        obj.location=locationFilter
+    }else{
+        obj.location="all"
+    }
+    if(arivalFilter !==null &&arivalFilter !=0){
+        obj.arival=arivalFilter
+    }else{
+        obj.arival="all"
+    }
+    if(priceFilter !==null && priceFilter!=0){
+        obj.priceRange=priceFilter
+    }else{
+        obj.priceRange="all"
+    }
+    if(propertyFilter !==null && propertyFilter!=0){
+        obj.property=propertyFilter
+    }else{
+        obj.property="all"
+    }
+    console.log(obj);
+    const [allfilter]=useState(data);
+    const allreq=data.filter(x=>x.location.includes(obj.location) && x.arival.includes(obj.arival) && x.priceRange.includes(obj.priceRange) && x.property.includes(obj.property));
+    // const allreq=data.filter((val)=>{
+    //     return obj.find((a)=>{
+    //         return val.location==a.location
+    //     })
+    // })
+    
+    console.log("printing all filters",allreq);
     return(
         <>
-        {console.log("location filter",locationFilter)}
-        {console.log("filtered product",filteredProduct)}
-        {console.log("properties",properties)}
-
-        {console.log("arivalFilter filter",arivalFilter)}
-        {console.log("arivalFilteredProduct product",arivalFilteredProduct)}
-        {console.log("arivalproperties",arivalProperties)}
-
-        {console.log("priceFilter filter",priceFilter)}
-        {console.log("priceFilteredProduct product",priceFilteredProduct)}
-        {console.log("priceProperties",priceProperties)}
-        {console.log("nested2",nested2)}
+        
 
         <House 
-        searchField={arivalFilter==0?propertyProperties: nested3}
+        searchField={allreq}
         />
         </>
     )

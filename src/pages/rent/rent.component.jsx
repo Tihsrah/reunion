@@ -2,13 +2,19 @@
 import Button from "../../objects/button/button.component";
 import './rent.styles.css'
 import SearchBox from "../../objects/searchbox/searchbox.components";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Dropdown from "../../objects/dropdown/dropdown.components";
 import Filter from "../../component/filter/filter.component";
 import ArivalDropDown from "../../objects/dropdown/arivalDropDown.component";
 import PriceDropDown from "../../objects/dropdown/pricedropdown.component";
 import PropertyDropdown from "../../objects/dropdown/propertyDropDown.component";
 import HouseSearchBox from "../../component/house/houseSearchBox.component";
+import House from "../../component/house/house.component";
+import { filterContext } from "../../context/filterContext.component";
+import { arivalContext } from "../../context/arivalFilter.component";
+import { priceContext } from "../../context/priceContext.component";
+import { propertyContext } from "../../context/propertyFilter.component";
+import data from "../../data/data";
 function Rent(){
 
     // const [searchField, setSearchField] = useState('');
@@ -100,7 +106,40 @@ function Rent(){
             text:"Big House"
         }
     ]
-    
+    const {locationFilter}=useContext(filterContext);
+    const {arivalFilter}=useContext(arivalContext);
+    const {priceFilter}=useContext(priceContext);
+    const {propertyFilter}=useContext(propertyContext);
+    const obj={}
+    if(locationFilter !==null && locationFilter !=0){
+        obj.location=locationFilter
+    }else{
+        obj.location="all"
+    }
+    if(arivalFilter !==null &&arivalFilter !=0){
+        obj.arival=arivalFilter
+    }else{
+        obj.arival="all"
+    }
+    if(priceFilter !==null && priceFilter!=0){
+        obj.priceRange=priceFilter
+    }else{
+        obj.priceRange="all"
+    }
+    if(propertyFilter !==null && propertyFilter!=0){
+        obj.property=propertyFilter
+    }else{
+        obj.property="all"
+    }
+    console.log(obj);
+    const [allfilter]=useState(data);
+    const allreq=data.filter(x=>x.location.includes(obj.location) && x.arival.includes(obj.arival) && x.priceRange.includes(obj.priceRange) && x.property.includes(obj.property));
+     
+    function handleChange(){
+        console.log("clicked");
+        const allreq=data.filter(x=>x.location.includes(obj.location) && x.arival.includes(obj.arival) && x.priceRange.includes(obj.priceRange) && x.property.includes(obj.property));
+        console.log(allreq)
+    }
 
     return(
         <div className="rent-body">
@@ -151,6 +190,7 @@ function Rent(){
             <Button 
                 style={"btn-filter btn-blue"}
                 name="Search"
+                onChange={handleChange}
             />
             </div>
         </div>
@@ -159,7 +199,10 @@ function Rent(){
         <div className="property-cards">
         
         {/*we can use <HouseSearchBox /> here to use search input box for filtering with input. */}
-        <Filter /> 
+        {console.log(allreq)}
+        <House 
+        searchField={allreq}
+        />
         </div>
 
         </div>
