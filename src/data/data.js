@@ -39,7 +39,7 @@ const data = [
         beds:"3",
         bathrooms:"2",
         dimension:"5x7 ",
-        price:"$4,550",
+        price:"$3,550",
         property:"Big House  all",
         arival:"12 Jun - 14 Jul  all",
         min:3000,
@@ -55,7 +55,7 @@ const data = [
         beds:"3",
         bathrooms:"2",
         dimension:"5x7 ",
-        price:"$4,550",
+        price:"$3,550",
         property:"Houses all",
         arival:"12 Jun - 14 Jul all",
         min:3000,
@@ -76,7 +76,7 @@ const data = [
         arival:"12 Nov - 14 Dec all",
         min:1500,
         max:4000,
-        priceRange:"3500-5500 all"
+        priceRange:"4500-5500 all"
         
         
     },
@@ -93,7 +93,7 @@ const data = [
         arival:"12 Nov - 14 Dec all",
         min:1500,
         max:4000,
-        priceRange:"3500-5500 all"
+        priceRange:"4500-5500 all"
         
     },
     {
@@ -104,7 +104,7 @@ const data = [
         beds:"3",
         bathrooms:"2",
         dimension:"5x7 ",
-        price:"$4,550",
+        price:"$3,550",
         property:"Houses all",
         arival:"12 Apr - 14 Mar all",
         min:1500,
